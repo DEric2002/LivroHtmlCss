@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML prática do livro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="boxOutside">
+        <div class="boxWords">
+            <h2 id="tituloPag">HTML e CSS Prática</h2>
+            <h3 id="titulosH3">Lista de compras</h3>
+            <p>Pequena pratica usando lista dentro de lista... vale a pena lembrar que podemos estruturar como desejamos!</p>
+                <ul>
+                    <li>Arroz</li>
+                    <li>Feijão</li>
+                    <li>Batata</li>
+                    <li>Carne <!--lista ordenada dentro de uma lista--></li>
+                        <ol style="list-style-type: circle;">
+                            <li>Peixe</li>
+                            <li>Frango</li>
+                            <li>Boi</li>
+                        </ol>
+                    <li>Verduras</li>
+                        <ol style="list-style-type: circle;"><li>Cenoura</li>
+                            <li>Alface</li>
+                            <li>Pepino</li>
+                            <li>Colve</li>
+                            <li>Beterraba</li>
+                        </ol>
+                </ul>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas sunt quidem soluta? Quibusdam consequuntur voluptates ullam est, numquam consequatur porro! Laboriosam consequuntur ea ducimus nulla eos tenetur tempore sequi officia?</p>
+            
+            <h3 id="titulosH3">Tabelas</h3>
+            <!--Para criar uma tabela usa-se tag <table>... a cada linha se define pela tag <tr>, e as colunas <td>-->
+            <table>
+                <tr>
+                    <td>Produto</td>
+                    <td>Valor</td>
+                <tr>
+                    <td>Feijão</td>
+                    <td>4,50</td>
+                </tr>
+            </table>
+
+            <h3 id="titulosH3">Imagens</h3>
+            <picture><!-- esse comando auxilia e oferece possibilidades de deixar a imagem mais dinâmica-->
+                <source media="(max-width: 400px)" srcset="imagens/verdurasPq.jpeg">
+                <img src="imagens/verdurasNorm.jpeg" title="Imagem de frutas">
+            </picture>
+
+            <h3 id="titulosH3">Usando o iFrame</h3>
+            <!--Usando o iframe para colocar uma página dentro da minha página web-->
+            <iframe id="videoEx" src="https://www.youtube.com/embed/ii-KRRt13o4" title="Vídeo explicativo sobre o iFrame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <h3 id="titulosH3">Elementos de código</h3>
+            <p>Para salvar um texto, pressione <kbd>Crtl + S</kbd></p> <!--Rpresenta a entrada do usuário, como a entrada de teclado ou comandos de voz-->
+            <p>Escreva o trecho a seguir <code>x = 1 + 2;</code></p> <!--Representa algum trecho de codigo de alguma programação-->
+            <p>Princípio da Relatividade: <var>E</var> = <var>mc</var> <sup>2</sup>.</p><!--A variável poderia ser uma variavel em uma expressão matemática ou uma variável no contexto de programação -->
+        
+            <h3 id="titulosH3"> Caracteres e comandos especiais em HTML</h3>
+            <p>Para construir paginas web, e inevitável que precisamos utilizar alguns recursos especiais reservados pelo interpretador do navegador, como os sinais menor que (&lt;) e maior que(&gt;)</p>
+            <p>Aqui vai uma lista com os simbolos</p>
+            <table>
+                <tr>
+                    <td>Descrição</td>
+                    <td>Resultado</td>
+                    <td>Comando</td>
+                </tr>
+                <tr>
+                    <td>Setas</td>
+                    <td> &larr; </td>
+                    <td> &lar ;</td> <!--  VALE APENA LEMBRAR!! NÃO SÃO PERMITIDOS ESPAÇOS ENTRE OS COMANDOS, COMO O &LARR; -->
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td> &uarr; </td>
+                    <td> &uarr ; </td>
+                </tr>
+            </table>
+            <p>Assim segue a tabela... Na maioria da vezes os comandos seguem começando com & comercial!</p>
+
+            <h3 id="titulosH3">Formulários e Input</h3>
+            <p>O formulário web é um conjunto de elementos que selecionados, enviamos para outra página de recebimento, essa página é responsável por processar os dados que enviamos atravez do fomrulário.</p>
+            
+            <div class="boxForm">
+                <form class="form-group">
+                    <fieldset class="form-group">
+                        <legend>Dados exemplo</legend>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" id="usuario" name="usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" name="senha">
+                        </div>
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select for="sexo"name="sexo">
+                                <option id="sexo">Masculino</option>
+                                <option id="sexo">Feminino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtA">Digite algo mais...</label>
+                            <textarea name="txtA" id="txtA"></textarea>
+                        </div>
+                        <div class="form-group-buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="reset" id="limpar">Limpar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            
+
+        </div>
+    </div>
+</body>
+</html>
+

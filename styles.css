@@ -1,0 +1,83 @@
+
+
+/* usando essas linhas de estilo, ate ".boxWords"... obtive o resultado de alinhamento, cores e centralização das "Divs".*/
+body { 
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    background: rgb(45, 94, 255);
+    margin: auto;
+}
+.boxOutside {
+    max-width: 450px;
+    min-height: 500px;
+    background: rgba(0, 0, 0, 0.853);
+    /*no box-shadow, offset-x | offset-y | blur-radius | spread-radius | color*/
+    box-shadow: 0 2px 5px 3px rgb(0, 14, 92);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto 15px;
+    padding: 0;
+    border-radius: 10px;
+}
+.boxWords {
+    max-width: 400px;
+    min-height: 350px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    /* box-shadow- offset-x | offset-y | blur-radius | spread-radius | color*/
+    box-shadow: 0 2px 5px 3px rgb(45, 94, 255);
+}   /*Finalizado a estilização das "boxes" de escritas, textos, titulos, centralização e aliamneto*/
+
+
+.boxWords {
+    font-family: 'Carme', sans-serif;
+}
+.boxWords #tituloPag {
+    text-shadow: 0 2px 3px rgb(0, 0, 0);
+    color: rgb(45, 94, 255);
+}
+.boxWords #titulosH3 {
+    color: rgb(45, 94, 255);
+}
+.boxWords img {
+    width: 100%;
+}
+.boxWords #videoEx {
+    width: 100%;
+}
+
+/* Estilizando o Formulário dentro da minha pagina */
+
+.form-group {
+    max-width: 80%;
+    padding: 0px 10px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.form-group div {
+    align-items: center;
+    margin: auto;
+    padding: 3px 10px;
+    text-align: center;
+}
+.form-group fieldset{
+    width: 270px;
+    margin: auto;
+}
+.form-group select {
+    padding: 2px;
+}
+.form-group select {
+    width: 80%;
+}
+.form-group textarea {
+    width: 80%;
+    resize: vertical;
+}
